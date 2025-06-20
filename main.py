@@ -1,3 +1,4 @@
+import sys
 import pygame
 from constants import *
 from player import *
@@ -23,6 +24,11 @@ def main():
                 return
         dt = clock.tick(60) / 1000
         updateable.update(dt)
+        for asteroid in asteroids:
+            player.collision_check(asteroid)
+            if player.collision_check(asteroid):
+                print("Game over!")
+                sys.exit()
 
 
 print("Starting Asteroids!")
