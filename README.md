@@ -1,1 +1,1 @@
-# asteroids
+This is my second Boot.Dev project using Python!
